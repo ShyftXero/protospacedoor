@@ -52,3 +52,7 @@ entries.insert(temp)
 all_users = db['users'].all()
 all_entries = db['log'].all()
 ```
+
+# TODO:
+*add offsite logging via firebase
+*allow remote entry via firebase
