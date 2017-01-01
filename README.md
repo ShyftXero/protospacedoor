@@ -1,6 +1,10 @@
 # protospacedoor
 
-access control for futurespace(formerly protospace)
+raspberry pi based access control for futurespace(formerly protospace)
+
+```
+sudo pip3 install < requirements.txt
+```
 
 add this to .bashrc
 
