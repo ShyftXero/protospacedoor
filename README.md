@@ -1,9 +1,19 @@
 # protospacedoor
 
-use gui to admin 
-```#sandman2ctl sqlite+pysqlite:///futurespace.db```
-access it via localhost:5000/admin
+access control for futurespace(formerly protospace)
 
+add this to .bashrc
+
+```
+sandman2ctl sqlite+pysqlite:///futurespace.db &
+
+python3 door.py
+```
+
+access admin via localhost:5000/admin
+
+
+Notes about how stuff works:
 ```
 db = dataset.connect('sqlite:///futurespace.db')
 
@@ -30,7 +40,7 @@ entries = db['log']
 utc = arrow=utcnow()
 local = utc.to('US/Central')
 
-temp = {'time':local.humanize(), 'user':user}
+temp = {'time':local.timestamp(), 'user':user}
 
 entries.insert(temp)
 
