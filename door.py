@@ -2,14 +2,13 @@
 # authorized =['0212394425','0213660857', '0857870596','0213548985','0217342905','0067305985', '2459177220']
 
 
-PROD = False
+PRODUCTION = False
 
-#import sqlite3 as sql
 import dataset
 import time
 import arrow
 
-if PROD:
+if PRODUCTION:
 	import RPi.GPIO as GPIO
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(7,GPIO.OUT)
@@ -57,7 +56,7 @@ while True:
 		user = who(keyfob_id)
 		print("allowed")
 		print('user:', user['name'], 'keyfob:', user['keyfob'])
-		if PROD:
+		if PRODUCTION:
 			GPIO.output(7, GPIO.LOW)
 			time.sleep(5)
 			GPIO.output(7, GPIO.HIGH)
