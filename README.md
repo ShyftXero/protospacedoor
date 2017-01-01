@@ -54,5 +54,5 @@ all_entries = db['log'].all()
 ```
 
 # TODO:
-*add offsite logging via firebase
-*allow remote entry via firebase
+* add offsite logging via firebase
+* allow remote entry via firebase
