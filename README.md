@@ -16,6 +16,14 @@ python3 door.py
 
 access admin via localhost:5000/admin
 
+Use an NFC tag reading app to get the serial number in aa:bb:cc:dd:ee:ff format
+
+always read the last 4 bytes in reverse order.
+
+tag id 04:4d:cd:92:6d:40:80
+```
+python3 -c "s = '04:4d:cd:92:6d:40:80'.split(':')[0:4];print(int('0x'+''.join(s[::-1]), 16))"
+```
 
 Notes about how stuff works:
 ```
