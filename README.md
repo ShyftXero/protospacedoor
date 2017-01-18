@@ -25,6 +25,8 @@ tag id 04:4d:cd:92:6d:40:80
 python3 -c "s = '04:4d:cd:92:6d:40:80'.split(':')[0:4];print(int('0x'+''.join(s[::-1]), 16))"
 ```
 
+Don't forget to change PRODUCTION to True
+
 Notes about how stuff works:
 ```
 db = dataset.connect('sqlite:///futurespace.db')
